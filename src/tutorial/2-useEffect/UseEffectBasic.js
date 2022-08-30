@@ -4,12 +4,12 @@ const UseEffectBasic = () => {
   const [value, setValue] = useState(0);
   useEffect(() => {
     // if condition can be inside the useEffect but useEffect hook can not be inside the If or any conditional statement
-    console.log("useEffect function call");
+    // console.log("useEffect function call");
     if (value >= 1) {
       document.title = `New Message(${value})`;
     }
-  });
-  console.log("Render Component");
+  }, [value]);
+  //   console.log("Render Component");
   return (
     <div>
       <h3>useEffect Hook</h3>
