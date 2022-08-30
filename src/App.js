@@ -4,6 +4,7 @@ import ErrorExample from "./tutorial/1-useState/ErrorExample";
 import Object from "./tutorial/1-useState/Object";
 import SimpleCounter from "./tutorial/1-useState/SimpleCounter";
 import UseEffectBasic from "./tutorial/2-useEffect/UseEffectBasic";
+import UseEffectCleanUp from "./tutorial/2-useEffect/UseEffectCleanUp";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Object />
       <SimpleCounter /> */}
       <UseEffectBasic />
+      <UseEffectCleanUp />
     </div>
   );
 }
