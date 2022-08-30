@@ -12,6 +12,16 @@ const SimpleCounter = () => {
       setValue(0);
     }
   };
+
+  const handleComplex = () => {
+    setTimeout(() => {
+      //   setValue(value + 1);  // this will gives only value + 1 however we clicked multiple times
+      setValue((prevState) => {
+        return prevState + 1; // this will give result how many times we clicked on button, so it gives output as every state changed although 2 seconds done or not done.
+      });
+    }, 2000);
+  };
+
   return (
     <div>
       <h2>Simple Counter</h2>
@@ -24,6 +34,11 @@ const SimpleCounter = () => {
       </button>
       <button className="btn" onClick={() => setValue(value + 1)}>
         Increase
+      </button>
+      <h2>More Complex Counter</h2>
+      <h3>{value}</h3>
+      <button className="btn" onClick={handleComplex}>
+        Complex Increase
       </button>
     </div>
   );
