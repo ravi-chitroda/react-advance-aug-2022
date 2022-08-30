@@ -5,6 +5,7 @@ import Object from "./tutorial/1-useState/Object";
 import SimpleCounter from "./tutorial/1-useState/SimpleCounter";
 import UseEffectBasic from "./tutorial/2-useEffect/UseEffectBasic";
 import UseEffectCleanUp from "./tutorial/2-useEffect/UseEffectCleanUp";
+import UseEffectFetch from "./tutorial/2-useEffect/UseEffectFetch";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <SimpleCounter /> */}
       <UseEffectBasic />
       <UseEffectCleanUp />
+      <UseEffectFetch />
     </div>
   );
 }
