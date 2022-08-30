@@ -13,7 +13,7 @@ const ArrayExample = () => {
     <div>
       {days.map((day) => {
         const { id, name } = day;
-        console.log(day);
+        // console.log(day);
         return (
           <div key={id} className="item">
             <h4>{name}</h4>

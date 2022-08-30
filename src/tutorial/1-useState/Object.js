@@ -6,7 +6,7 @@ const Object = () => {
     age: 31,
     message: "Random Message",
   });
-  console.log("person Object", person);
+  //   console.log("person Object", person);
   const handleChangeBtn = () => {
     // here we used spread operation because we want to change only message, not name and age. so spread operator will keep other data as it is and only changes new changed data it received.
 
