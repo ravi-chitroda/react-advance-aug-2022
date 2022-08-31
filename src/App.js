@@ -8,6 +8,7 @@ import UseEffectCleanUp from "./tutorial/2-useEffect/UseEffectCleanUp";
 import UseEffectFetch from "./tutorial/2-useEffect/UseEffectFetch";
 import MultipleReturn from "./tutorial/Conditional Rendering/MultipleReturn";
 import ShortCircuit from "./tutorial/Conditional Rendering/ShortCircuit";
+import ShowHide from "./tutorial/Conditional Rendering/ShowHide";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <UseEffectFetch /> */}
       <MultipleReturn />
       <ShortCircuit />
+      <ShowHide />
     </div>
   );
 }
