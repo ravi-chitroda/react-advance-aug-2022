@@ -7,10 +7,9 @@ import UseEffectBasic from "./tutorial/2-useEffect/UseEffectBasic";
 import UseEffectCleanUp from "./tutorial/2-useEffect/UseEffectCleanUp";
 import UseEffectFetch from "./tutorial/2-useEffect/UseEffectFetch";
 import UseRef from "./tutorial/4-useRef/UseRef";
-import MultipleReturn from "./tutorial/3-Conditional Rendering/MultipleReturn";
-import ShortCircuit from "./tutorial/3-Conditional Rendering/ShortCircuit";
-import ShowHide from "./tutorial/3-Conditional Rendering/ShowHide";
-import Setup from "./tutorial/5-useReducer/setup";
+import MultipleReturn from "./tutorial/Conditional Rendering/MultipleReturn";
+import ShortCircuit from "./tutorial/Conditional Rendering/ShortCircuit";
+import ShowHide from "./tutorial/Conditional Rendering/ShowHide";
 
 function App() {
   return (
@@ -19,14 +18,15 @@ function App() {
       <ArrayExample />
       <Object />
       <SimpleCounter /> */}
+
       {/* <UseEffectBasic />
       <UseEffectCleanUp />
       <UseEffectFetch /> */}
+
       {/* <MultipleReturn />
       <ShortCircuit />
       <ShowHide /> */}
-      {/* <UseRef /> */}
-      <Setup />
+      <UseRef />
     </div>
   );
 }
