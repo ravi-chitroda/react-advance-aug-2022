@@ -5,12 +5,12 @@ import Modal from "./Modal";
 const reducer = (state, action) => {};
 
 const defaultState = {
-  isModalOpen: true,
-  days: data,
-  modalContent: "hello World",
-  // isModalOpen: false,
-  // days: [],
-  // modalContent: "",
+  // isModalOpen: true,
+  // days: data,
+  // modalContent: "hello World",
+  isModalOpen: false,
+  days: [],
+  modalContent: "",
 };
 
 const Index = () => {
