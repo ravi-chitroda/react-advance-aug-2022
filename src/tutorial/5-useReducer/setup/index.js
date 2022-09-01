@@ -60,6 +60,7 @@ const Index = () => {
       setName("");
     } else {
       // dispatch({ type: "RANDOM" }); //To show error throw in reducer, RANDOM is not any value
+      dispatch({ type: "NO_VALUE" });
     }
   };
 
