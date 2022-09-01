@@ -1,30 +1,7 @@
 import React, { useReducer, useState } from "react";
 import { data } from "../../../data";
 import Modal from "./Modal";
-
-//action = type : "TESTING" it will always in object form.  type is property, TESTING is value
-//dispatch = function which is pass action which is in object to the state.
-//so now, type property which has testing value("action") is catch by reducer with dispatch, that means we are not directly affecting state. reducer is done all things.
-
-const reducer = (state, action) => {
-  console.log("state", state);
-  if (action.type === "ADD_ITEM") {
-    const newDays = [...state.days, action.payload];
-    return {
-      ...state,
-      isModalOpen: true,
-      days: newDays,
-      modalContent: "item added",
-    };
-  }
-  // console.log(state, action);
-  // return state; // reducer always need to return state/////otherwise it will get error... above we return state
-  if (action.type === "NO_VALUE") {
-    return { ...state, isModalOpen: true, modalContent: "Please Enter Value" };
-  }
-
-  throw new Error("Not matching action type");
-};
+import { reducer } from "./Reducer";
 
 const defaultState = {
   // isModalOpen: true,
@@ -64,10 +41,17 @@ const Index = () => {
     }
   };
 
+  //To close modal after some time use this function dispatch type and value to reducer, than reducer will take action which is isModalOpen:false than we pass this function to Modal.js as a prop
+  const closeModal = () => {
+    dispatch({ type: "CLOSE_MODAL" });
+  };
+
   return (
     <div>
       {/* {showModal && <Modal />} */}
-      {state.isModalOpen && <Modal modalContent={state.modalContent} />}
+      {state.isModalOpen && (
+        <Modal modalContent={state.modalContent} closeModal={closeModal} />
+      )}
       <form onSubmit={handleSubmit} className="form">
         <div>
           <input
@@ -82,8 +66,13 @@ const Index = () => {
       </form>
       {state.days.map((day) => {
         return (
-          <div key={day.id}>
+          <div key={day.id} className="item">
             <h4>{day.name}</h4>
+            <button
+              onClick={() => dispatch({ type: "REMOVE_ITEM", payload: day.id })}
+            >
+              Remove
+            </button>
           </div>
         );
       })}
