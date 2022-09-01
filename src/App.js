@@ -11,6 +11,7 @@ import MultipleReturn from "./tutorial/3-Conditional Rendering/MultipleReturn";
 import ShortCircuit from "./tutorial/3-Conditional Rendering/ShortCircuit";
 import ShowHide from "./tutorial/3-Conditional Rendering/ShowHide";
 import Setup from "./tutorial/5-useReducer/setup";
+import PropDrilling from "./tutorial/6-prop_Drilling/PropDrilling";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
       <ShortCircuit />
       <ShowHide /> */}
       {/* <UseRef /> */}
-      <Setup />
+      {/* <Setup /> */}
+      <PropDrilling />
     </div>
   );
 }
