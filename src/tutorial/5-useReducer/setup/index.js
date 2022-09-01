@@ -2,15 +2,37 @@ import React, { useReducer, useState } from "react";
 import { data } from "../../../data";
 import Modal from "./Modal";
 
-const reducer = (state, action) => {};
+//action = type : "TESTING" it will always in object form.  type is property, TESTING is value
+//dispatch = function which is pass action which is in object to the state.
+//so now, type property which has testing value("action") is catch by reducer with dispatch, that means we are not directly affecting state. reducer is done all things.
+
+const reducer = (state, action) => {
+  console.log("state", state);
+  if (action.type === "ADD_ITEM") {
+    const newDays = [...state.days, action.payload];
+    return {
+      ...state,
+      isModalOpen: true,
+      days: newDays,
+      modalContent: "item added",
+    };
+  }
+  // console.log(state, action);
+  // return state; // reducer always need to return state/////otherwise it will get error... above we return state
+  if (action.type === "NO_VALUE") {
+    return { ...state, isModalOpen: true, modalContent: "Please Enter Value" };
+  }
+
+  throw new Error("Not matching action type");
+};
 
 const defaultState = {
-  isModalOpen: true,
-  days: data,
-  modalContent: "hello World",
-  // isModalOpen: false,
-  // days: [],
-  // modalContent: "",
+  // isModalOpen: true,
+  // days: data,
+  // modalContent: "hello World",
+  isModalOpen: false,
+  days: [],
+  modalContent: "",
 };
 
 const Index = () => {
@@ -33,7 +55,11 @@ const Index = () => {
 
     //now we using useReducer
     if (name) {
+      const newItem = { id: new Date().getTime().toString(), name };
+      dispatch({ type: "ADD_ITEM", payload: newItem });
+      setName("");
     } else {
+      // dispatch({ type: "RANDOM" }); //To show error throw in reducer, RANDOM is not any value
     }
   };
 
@@ -50,7 +76,7 @@ const Index = () => {
           />
         </div>
         <button type="submit" className="btn">
-          Add Person
+          Add Day
         </button>
       </form>
       {state.days.map((day) => {

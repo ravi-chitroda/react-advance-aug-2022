@@ -11,15 +11,15 @@ const UseRef = () => {
   const divContainer = useRef(null);
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("ref", refContainer.current.value);
+    // console.log("ref", refContainer.current.value);
   };
-  console.log("refContainer", refContainer);
-  console.log("divContainer", divContainer.current);
+  //   console.log("refContainer", refContainer);
+  //   console.log("divContainer", divContainer.current);
 
   //there is no use of dependency array while using useEffect and useRef because useRef does not trigger Re-render
 
   useEffect(() => {
-    console.log(refContainer.current);
+    // console.log(refContainer.current);
     refContainer.current.focus();
   });
 
