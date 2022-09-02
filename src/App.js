@@ -15,6 +15,7 @@ import PropDrilling from "./tutorial/6-prop_Drilling/PropDrilling";
 import UseContextAPI from "./tutorial/7-useContext/UseContextAPI";
 import FetchExample from "./tutorial/8-customHooks/FetchExample";
 import Setup from "./tutorial/9-prop-types/setup";
+import Memo from "./tutorial/10-memo/Memo";
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
       {/* <PropDrilling /> */}
       {/* <UseContextAPI /> */}
       {/* <FetchExample /> */}
-      <Setup />
+      {/* <Setup /> */}
+      <Memo />
     </div>
   );
 }
