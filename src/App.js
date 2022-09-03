@@ -17,6 +17,7 @@ import FetchExample from "./tutorial/8-customHooks/FetchExample";
 import Setup from "./tutorial/9-prop-types/setup";
 import Memo from "./tutorial/10-memo/Memo";
 import UseCallback from "./tutorial/10-memo/UseCallback";
+import UseMemo from "./tutorial/10-memo/UseMemo";
 
 function App() {
   return (
@@ -38,7 +39,8 @@ function App() {
       {/* <FetchExample /> */}
       {/* <Setup /> */}
       {/* <Memo /> */}
-      <UseCallback />
+      {/* <UseCallback /> */}
+      <UseMemo />
     </div>
   );
 }
