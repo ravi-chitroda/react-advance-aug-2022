@@ -9,8 +9,8 @@ const Navbar = () => {
   //       console.log(store);
   //     })
   //   );
-  //   const amount = useSelector((store) => store.cart.amount);  //or we can write as below
-  const { amount } = useSelector((store) => store.cart);
+  const amount = useSelector((store) => store.cart.amount); //or we can write as below
+  //   const { amount } = useSelector((store) => store.cart);
   return (
     <nav>
       <div className="nav-center">
