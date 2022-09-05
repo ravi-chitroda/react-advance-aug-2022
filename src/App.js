@@ -17,6 +17,7 @@ import FetchExample from "./tutorial/8-customHooks/FetchExample";
 import Setup from "./tutorial/9-prop-types/setup";
 import Memo from "./tutorial/10-memo/Memo";
 import UseCallback from "./tutorial/10-memo/UseCallback";
+import Navbar from "./redux/components/Navbar";
 
 function App() {
   return (
@@ -38,7 +39,9 @@ function App() {
       {/* <FetchExample /> */}
       {/* <Setup /> */}
       {/* <Memo /> */}
-      <UseCallback />
+      {/* <UseCallback /> */}
+      {/* <h2>Redux Toolkit</h2> */}
+      <Navbar />
     </div>
   );
 }
