@@ -318,6 +318,9 @@ p {
   text-transform: capitalize;
   cursor: pointer;
 }
+
+/* //Below Code will be used after Redux introduce */
+
 /*
 =============== 
 Variables
