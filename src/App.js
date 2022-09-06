@@ -18,6 +18,7 @@ import Setup from "./tutorial/9-prop-types/setup";
 import Memo from "./tutorial/10-memo/Memo";
 import UseCallback from "./tutorial/10-memo/UseCallback";
 import Navbar from "./redux/components/Navbar";
+import CartContainer from "./redux/components/CartContainer";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
       {/* <UseCallback /> */}
       {/* <h2>Redux Toolkit</h2> */}
       <Navbar />
+      <CartContainer />
     </div>
   );
 }
