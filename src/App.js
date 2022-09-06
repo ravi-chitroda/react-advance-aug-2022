@@ -19,8 +19,18 @@ import Memo from "./tutorial/10-memo/Memo";
 import UseCallback from "./tutorial/10-memo/UseCallback";
 import Navbar from "./redux/components/Navbar";
 import CartContainer from "./redux/components/CartContainer";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { calculateTotals } from "./redux/feature/cart/CartSlice";
 
 function App() {
+  const { cartItem } = useSelector((store) => store.cart);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(calculateTotals());
+  }, [cartItem]);
+
   return (
     <div className="container">
       {/* <ErrorExample />
