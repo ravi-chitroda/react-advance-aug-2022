@@ -22,9 +22,11 @@ import CartContainer from "./redux/components/CartContainer";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { calculateTotals } from "./redux/feature/cart/CartSlice";
+import Modal from "./redux/components/Modal";
 
 function App() {
   const { cartItem } = useSelector((store) => store.cart);
+  const { isOpen } = useSelector((store) => store.modal);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -52,6 +54,7 @@ function App() {
       {/* <Memo /> */}
       {/* <UseCallback /> */}
       {/* <h2>Redux Toolkit</h2> */}
+      {isOpen && <Modal />}
       <Navbar />
       <CartContainer />
     </div>
