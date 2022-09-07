@@ -21,17 +21,29 @@ import Navbar from "./redux/components/Navbar";
 import CartContainer from "./redux/components/CartContainer";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { calculateTotals } from "./redux/feature/cart/CartSlice";
+import { calculateTotals, getCartItems } from "./redux/feature/cart/CartSlice";
 import Modal from "./redux/components/Modal";
 
 function App() {
-  const { cartItem } = useSelector((store) => store.cart);
+  const { cartItem, isLoading } = useSelector((store) => store.cart);
   const { isOpen } = useSelector((store) => store.modal);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(calculateTotals());
   }, [cartItem]);
+
+  useEffect(() => {
+    dispatch(getCartItems());
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="loading">
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="container">
